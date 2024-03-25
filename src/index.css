@@ -266,6 +266,7 @@ input:focus {
 }
 
 .content {
+  margin-top: 25px;
   text-align: center;
 }
 
@@ -284,4 +285,47 @@ input:focus {
   align-items: center;
   justify-content: center;
   gap: 10px;
+}
+
+.pizza {
+  display: flex;
+  gap: 16px;
+  padding: 8px 0;
+}
+
+.pizza__image {
+  width: 100px;
+  height: 100px;
+}
+
+.pizza__info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.pizza__name {
+  font-weight: 500;
+  text-align: left;
+}
+
+.pizza__ingredients {
+  font-style: italic;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.pizza__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pizza__price {
+  font-size: 14px;
+}
+
+.soldout {
+  background-color: rgba(55, 55, 55, 0.5);
+  /* z-index: 1; */
 }

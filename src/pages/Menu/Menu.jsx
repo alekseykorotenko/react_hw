@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import MenuItem from '../MenuItem/MenuItem';
+import MenuItem from '../../components/MenuItem/MenuItem';
 
 const Menu = () => {
   const [pizzas, setPizzas] = useState([]);

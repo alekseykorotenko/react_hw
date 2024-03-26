@@ -1,6 +1,6 @@
 const Button = (props) => {
-  const { text } = props;
-  return <button>{text}</button>;
+  const { className, text } = props;
+  return <button className={className}>{text}</button>;
 };
 
 export default Button;

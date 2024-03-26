@@ -1,6 +1,13 @@
+import CountButton from '../CountButton/CountButton';
+
 const Button = (props) => {
-  const { className, text } = props;
-  return <button className={className}>{text}</button>;
+  const { className, text, isCount } = props;
+
+  return !isCount ? (
+    <button className={className}>{text}</button>
+  ) : (
+    <CountButton className={className} />
+  );
 };
 
 export default Button;

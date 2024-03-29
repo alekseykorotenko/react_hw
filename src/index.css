@@ -330,3 +330,10 @@ input:focus {
   background-color: rgba(55, 55, 55, 0.5);
   /* z-index: 1; */
 }
+
+.menu__btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}

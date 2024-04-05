@@ -6,7 +6,7 @@ import { AuthContext } from '../../contexts/AuthContext';
 const Login = () => {
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
-  const { userName, setUserName } = useContext(AuthContext);
+  const { setUserName } = useContext(AuthContext);
 
   return (
     <div>

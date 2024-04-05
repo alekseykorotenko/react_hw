@@ -1,8 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import MenuItem from '../../components/MenuItem/MenuItem';
 
 const Menu = () => {
   const [pizzas, setPizzas] = useState([]);
+
   useEffect(() => {
     const getAllPizzas = async () => {
       try {
@@ -21,10 +22,10 @@ const Menu = () => {
   }, []);
 
   return (
-    <div className="content">
+    <div className='content'>
       <ul>
         {pizzas.map((pizza) => {
-          return <MenuItem key={pizza.id} pizza={pizza} />;
+          return <MenuItem key={pizza.id * Math.random()} pizza={pizza} />;
         })}
       </ul>
     </div>

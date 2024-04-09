@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import MenuItem from '../../components/MenuItem/MenuItem';
 
 const Menu = () => {
@@ -25,7 +25,11 @@ const Menu = () => {
     <div className='content'>
       <ul>
         {pizzas.map((pizza) => {
-          return <MenuItem key={pizza.id * Math.random()} pizza={pizza} />;
+          return (
+            <div>
+              <MenuItem key={pizza.id * Math.random()} pizza={pizza} />
+            </div>
+          );
         })}
       </ul>
     </div>

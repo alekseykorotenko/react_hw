@@ -1,11 +1,11 @@
 import React from 'react';
-import useFetch from '../../hooks/UseFetch';
+import useFetch from '../../hooks/useFetch';
 
 const RickAndMorty = () => {
   const { data, isLoading } = useFetch('https://rickandmortyapi.com/api/character');
 
   // console.log(isLoading);
-  console.log(data);
+  // console.log(data);
 
   return (
     <div>

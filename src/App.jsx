@@ -4,6 +4,7 @@ import Menu from './pages/Menu/Menu';
 import Login from './pages/Login/Login';
 import Order from './pages/Order/Order';
 import RickAndMorty from './pages/RickAndMorty/RickAndMorty';
+import Counter from './components/Counter/Counter';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         </nav>
 
         <Routes>
+          <Route path='/' element={<Counter />} />
           <Route path='/menu' element={<Menu />} />
           <Route path='/login' element={<Login />} />
           <Route path='/order/new' element={<Order />} />

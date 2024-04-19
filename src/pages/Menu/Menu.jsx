@@ -1,32 +1,22 @@
 import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import MenuItem from '../../components/MenuItem/MenuItem';
+import { fetchAllPizzas } from '../../redux/slices/pizzaSlice';
 
 const Menu = () => {
-  const [pizzas, setPizzas] = useState([]);
+  const pizzas = useSelector((state) => state.pizza.pizzas);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const getAllPizzas = async () => {
-      try {
-        const response = await fetch('https://react-fast-pizza-api.onrender.com/api/menu');
-
-        if (!response.ok) throw new Error('Failed to fetch');
-
-        const data = await response.json();
-        setPizzas(data.data);
-      } catch (error) {
-        console.log(error.message);
-      }
-    };
-
-    getAllPizzas();
-  }, []);
+    dispatch(fetchAllPizzas());
+  }, [dispatch]);
 
   return (
     <div className='content'>
       <ul>
         {pizzas.map((pizza) => {
           return (
-            <div>
+            <div key={pizza.id * Math.random()}>
               <MenuItem key={pizza.id * Math.random()} pizza={pizza} />
             </div>
           );
